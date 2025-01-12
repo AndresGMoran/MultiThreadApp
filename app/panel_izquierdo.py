@@ -62,7 +62,7 @@ class PanelIzquierdo:
         """Actualiza la información del clima utilizando un hilo."""
         def fetch_weather():
             try:
-                url = f'http://api.openweathermap.org/data/2.5/weather?q=Javea&appid=2f79c6f35c48e876bceae7fa7f4f4735&units=metric&lang=es'
+                url = f'http://api.openweathermap.org/data/2.5/weather?q=Javea&appid=key&units=metric&lang=es'
                 response = requests.get(url)
                 response.raise_for_status()
                 data = response.json()
@@ -96,7 +96,7 @@ class PanelIzquierdo:
         def fetch_news():
             while True:
                 try:
-                    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=bc352d5c21cf4ebcbbcf780f4a4b78d9'
+                    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=key'
                     response = requests.get(url)
                     response.raise_for_status()
                     data = response.json()
